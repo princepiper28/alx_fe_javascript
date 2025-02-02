@@ -26,6 +26,7 @@ async function fetchQuotesFromServer() {
         }));
 
         handleConflicts(formattedQuotes);
+        showNotification("✅ Quotes synced with server!"); // NEW: Show sync notification
     } catch (error) {
         console.error("Error fetching quotes from server:", error);
     }
